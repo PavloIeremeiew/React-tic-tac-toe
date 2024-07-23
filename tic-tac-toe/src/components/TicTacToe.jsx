@@ -14,7 +14,7 @@ function TicTacToe() {
   const [whoWin, setWhoWin] = useState(String.empty);
 
   const handleClick = (rowIndex, colIndex, cell) => {
-    if (cell === String.empty && whoWin == String.empty) {
+    if (cell === String.empty && whoWin === String.empty) {
       setData(SetSquare(rowIndex, colIndex, data, isX));
       setIsX(!isX);
     }
