@@ -3,15 +3,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-
+    text-align: center;
 }
 
 .square{
   width: 50px;
   height: 50px;
   background-color: transparent;
-  border: 2px solid #000000; 
-  /*color: #007bff;*/
+  border: 2px solid var(--black); 
   font-weight: bold;
   font-size: large;
 }
@@ -20,4 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.againButton{
+  padding: 5px;
+  margin: 18px;
+  font-weight: bold;
+  font-size: large;
+  background-color: transparent;
+  border: 2px solid var(--black);
 }

@@ -12,7 +12,7 @@ function Board({ data, handleClick }) {
     </div>
   ));
 
-  return <div className="board">{board}</div>;
+  return <div>{board}</div>;
 }
 
 export default Board;
