@@ -5,8 +5,11 @@ function WinCheck({ data, win, setWhoWin }) {
   if (win === "o") {
     return <h2 style={{ color: "var(--blue)" }}>O Win</h2>;
   }
-  const checks = [horizontalCheck, verticalCheck, diagonalCheck];
-  for (let i = 0; i < 3; i++) {
+  if (win === "draw") {
+    return <h2 style={{ color: "var(--black)" }}>Draw</h2>;
+  }
+  const checks = [horizontalCheck, verticalCheck, diagonalCheck, drawCheck];
+  for (let i = 0; i < 4; i++) {
     const check = checks[i](data);
     if (check !== String.empty) {
       setWhoWin(check);
@@ -46,4 +49,13 @@ function diagonalCheck(data) {
   )
     return data[1][1];
   return String.empty;
+}
+
+function drawCheck(data) {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (data[i][j] === String.empty) return String.empty;
+    }
+  }
+  return "draw";
 }
